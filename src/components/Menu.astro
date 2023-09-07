@@ -1,0 +1,26 @@
+---
+type Props = {
+	class?: string
+}
+
+const menu = [
+	{ label: 'home', href: '/' },
+	{ label: 'whoami', href: '/whoami/' },
+	{ label: 'blog', href: '/blog/' },
+	{ label: 'contact', href: '/contact/' }
+]
+
+const { class: className } = Astro.props
+---
+
+<nav id="menu" class:list={['border-white', className]}>
+	<ul class="grid divide-white max-sm:divide-y sm:auto-cols-fr sm:grid-flow-col sm:divide-x">
+		{
+			menu.map(({ label, href }) => (
+				<li class="px-4 py-2 text-center">
+					<a href={href}>> {label}</a>
+				</li>
+			))
+		}
+	</ul>
+</nav>

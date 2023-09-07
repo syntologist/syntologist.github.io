@@ -1,16 +1,13 @@
 ---
-
+import Menu from '@components/Menu.astro'
+import Banner from '@components/Banner.astro'
+import BaseLayout from '@layouts/BaseLayout.astro'
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body>
-    <h1>Astro</h1>
-  </body>
-</html>
+<BaseLayout title="syntologist" class="sm:px-4">
+	<main class="container flex h-screen max-w-2xl flex-col items-center justify-center">
+		<Banner />
+		<p class="mt-6 text-center">Giulia Mendes - pentester | bug bounty hunter</p>
+		<Menu class="mt-8 self-stretch border-y sm:border-x" />
+	</main>
+</BaseLayout>

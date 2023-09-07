@@ -1,0 +1,25 @@
+---
+import Menu from '@components/Menu.astro'
+import Path from '@components/Path.astro'
+---
+
+<header class="relative">
+	<div class="relative z-20 flex justify-between border-b border-white bg-black p-4">
+		<button id="toggle-menu" class="transition-transform sm:pointer-events-none sm:rotate-0">></button>
+		<Path />
+	</div>
+	<Menu
+		class="absolute z-10 -translate-y-full border-b bg-black max-sm:-inset-x-px max-sm:border-x sm:relative sm:translate-y-0"
+	/>
+</header>
+
+<script>
+	const menu = document.querySelector<HTMLElement>('#menu')!
+	const toggleMenu = document.querySelector<HTMLButtonElement>('#toggle-menu')!
+	toggleMenu.addEventListener('click', () => {
+		window.requestAnimationFrame(() => {
+			menu.classList.toggle('-translate-y-full')
+			toggleMenu.classList.toggle('rotate-90')
+		})
+	})
+</script>
