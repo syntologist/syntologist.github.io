@@ -2,12 +2,14 @@
 import Header from '@components/Header.astro'
 import Footer from '@components/Footer.astro'
 import BaseLayout, { type Props } from '@layouts/BaseLayout.astro'
+
+const { class: className, ...props } = Astro.props
 ---
 
-<BaseLayout {...Astro.props} class="px-4">
+<BaseLayout {...props} class="px-4">
 	<div class="container max-w-2xl border-x border-white">
 		<Header />
-		<main class="p-4">
+		<main class:list={['p-4', className]}>
 			<slot />
 		</main>
 		<Footer />

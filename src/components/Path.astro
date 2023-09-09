@@ -2,4 +2,6 @@
 const { pathname } = Astro.url
 ---
 
-<span>/srv/www/syntologist{pathname}</span>
+<span class="overflow-hidden overflow-ellipsis whitespace-nowrap py-4" style="direction: rtl;">
+	/srv/www/syntologist{pathname}
+</span>
