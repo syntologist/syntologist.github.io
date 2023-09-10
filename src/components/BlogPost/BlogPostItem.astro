@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets'
 import type { CollectionEntry } from 'astro:content'
 
 type Props = {
@@ -27,8 +28,11 @@ function readTime(text: string) {
 				<span>{readTime(item.body)} min read</span>
 			</div>
 		</div>
-		<img
-			{...item.data.image}
+		<Image
+			src={item.data.image}
+			alt={item.data.imageAlt}
+			width="200"
+			height="134"
 			class="h-[100px] w-[100px] self-center object-cover sm:w-[150px] md:h-[134px] md:w-[200px]"
 		/>
 	</a>
