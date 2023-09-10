@@ -1,6 +1,10 @@
 ---
-import { getCollection } from 'astro:content'
+import { getCollection, type CollectionEntry } from 'astro:content'
 import PageLayout from '@layouts/PageLayout.astro'
+
+type Props = {
+	entry: CollectionEntry<'blog'>
+}
 
 export async function getStaticPaths() {
 	const blogEntries = await getCollection('blog')
@@ -14,6 +18,8 @@ const { entry } = Astro.props
 const { Content } = await entry.render()
 ---
 
-<PageLayout title="A">
-	<Content />
+<PageLayout title={entry.data.title + ' - blog'} class="p-6">
+	<article class="prose prose-invert max-w-none prose-hr:border-white">
+		<Content />
+	</article>
 </PageLayout>

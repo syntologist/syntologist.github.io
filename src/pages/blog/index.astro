@@ -1,8 +1,11 @@
 ---
 import { getCollection } from 'astro:content'
 import PageLayout from '@layouts/PageLayout.astro'
+import BlogPostList from '@components/BlogPost/BlogPostList.astro'
 
 const blogEntries = await getCollection('blog')
 ---
 
-<PageLayout title="blog" />
+<PageLayout title="blog">
+	<BlogPostList list={blogEntries} />
+</PageLayout>

@@ -1,0 +1,35 @@
+---
+import type { CollectionEntry } from 'astro:content'
+
+type Props = {
+	item: CollectionEntry<'blog'>
+}
+
+const { item } = Astro.props
+
+const href = `/blog/${item.slug}/`
+
+function readTime(text: string) {
+	const wpm = 225
+	const words = text.trim().split(/\s+/).length
+	return Math.ceil(words / wpm)
+}
+---
+
+<li>
+	<a href={href} class="flex px-4 py-6">
+		<div class="mr-4 flex flex-1 flex-col gap-2">
+			<h2 class="text-lg font-bold">{item.data.title}</h2>
+			<p>{item.data.description}</p>
+			<div class="mt-auto flex gap-2 text-sm">
+				<span>{item.data.publishDate.toLocaleDateString('en', { month: 'short', day: '2-digit' })}</span>
+				<span>·</span>
+				<span>{readTime(item.body)} min read</span>
+			</div>
+		</div>
+		<img
+			{...item.data.image}
+			class="h-[100px] w-[100px] self-center object-cover sm:w-[150px] md:h-[134px] md:w-[200px]"
+		/>
+	</a>
+</li>
