@@ -2,7 +2,7 @@
 title: Example blog post
 description: This is a example description
 image:
-  src: /images/pic1.jpeg
+  src: /src/assets/cybersec.jpeg
   alt: Teste
 publishDate: 2023-09-10
 ---

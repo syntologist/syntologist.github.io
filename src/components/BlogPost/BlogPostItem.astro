@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets'
 import type { CollectionEntry } from 'astro:content'
 
 type Props = {
@@ -8,6 +9,8 @@ type Props = {
 const { item } = Astro.props
 
 const href = `/blog/${item.slug}/`
+
+const image = await import(/* @vite-ignore */ item.data.image.src).then((image) => image.default)
 
 function readTime(text: string) {
 	const wpm = 225
@@ -27,8 +30,11 @@ function readTime(text: string) {
 				<span>{readTime(item.body)} min read</span>
 			</div>
 		</div>
-		<img
-			{...item.data.image}
+		<Image
+			src={image}
+			alt={item.data.image.alt}
+			width="200"
+			height="134"
 			class="h-[100px] w-[100px] self-center object-cover sm:w-[150px] md:h-[134px] md:w-[200px]"
 		/>
 	</a>

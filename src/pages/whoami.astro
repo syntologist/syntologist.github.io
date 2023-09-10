@@ -1,17 +1,23 @@
 ---
+import { Image } from 'astro:assets'
 import Link from '@components/Link.astro'
 import PageLayout from '@layouts/PageLayout.astro'
+import cybersecImage from '@assets/cybersec.jpeg'
 ---
 
 <PageLayout title="whoami" class="flex flex-col gap-4">
 	<h2>~$: cat bio.txt</h2>
-
 	<p>My name is Giulia, but you can call me Gihu, or Syntologist, or however you like.</p>
 	<p>
 		My dad gave me a laptop running some Linux distro back in middle school, and ever since, I couldn't stop loving
 		computers.
 	</p>
-	<img src="/images/pic1.jpeg" alt="A picture of myself using the computer" class="my-4 border border-white" />
+	<Image
+		src={cybersecImage}
+		alt="A picture of myself in cyber security summit"
+		width="638"
+		class="my-4 border border-white"
+	/>
 	<p>
 		I'm a self-taught ethical hacker and bug bounty hunter on the Bugcrowd and HackerOne platforms since 2021,
 		experienced with Linux environments and Kali Linux for penetration testing. Experienced with the CWE top 25 and
@@ -20,7 +26,7 @@ import PageLayout from '@layouts/PageLayout.astro'
 	</p>
 
 	<h2>~$: cat certificates.txt</h2>
-	<ul class="list-inside list-disc">
+	<ul class="flex list-inside list-disc flex-col gap-2">
 		<li>
 			EC-Council - Getting started with AWS pentesting <Link
 				href="https://codered.eccouncil.org/certificate/61cfc37d-b430-46a3-84da-b51f755dd678?logged=true"
@@ -29,11 +35,10 @@ import PageLayout from '@layouts/PageLayout.astro'
 			</Link> (August 2023)
 		</li>
 		<li>
-			EC- Council - Full Stack Attacks on Modern Web Applications <Link
-				href="https://codered.eccouncil.org/certificate/28df1500-f79e-4351-8a2e-94ead9879c37?logged=true"
-			>
+			EC- Council - Full Stack Attacks on Modern Web Applications
+			<Link href="https://codered.eccouncil.org/certificate/28df1500-f79e-4351-8a2e-94ead9879c37?logged=true">
 				ID: 196055
-			</Link>(January 2023)
+			</Link>&nbsp;(January 2023)
 		</li>
 		<li>TOEFL ITP C1 (November 2021)</li>
 		<li>FreeCodeCamp, Kali Linux for ethical hackers (July 2021)</li>
