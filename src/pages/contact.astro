@@ -1,5 +1,20 @@
 ---
+import Link from '@components/Link.astro'
 import PageLayout from '@layouts/PageLayout.astro'
 ---
 
-<PageLayout title="contact">contact</PageLayout>
+<PageLayout title="contact" class="flex flex-col gap-4">
+	<h2>~$: cat contact-info.txt</h2>
+
+	<p>You can find me online on:</p>
+	<ul class="list-inside list-disc">
+		<li>
+			<Link href="https://www.linkedin.com/in/giulia-mendes-01a757227/">LinkedIn</Link>
+		</li>
+	</ul>
+	<p>Or feel free to reach out directly through:</p>
+	<li>
+		<Link href="mailto:giu.mendes@protonmail.com">giu.mendes@protonmail.com</Link>
+	</li>
+	<p>For any sensitive info, please send me encrypted mails with PGP:</p>
+</PageLayout>
