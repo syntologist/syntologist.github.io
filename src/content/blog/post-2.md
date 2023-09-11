@@ -1,8 +1,6 @@
 ---
 title: Example blog post
 description: This is a example description
-image: /src/assets/cybersec.jpeg
-imageAlt: Teste
 publishDate: 2023-09-10
 ---
 

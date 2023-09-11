@@ -3,7 +3,9 @@ import { getCollection } from 'astro:content'
 import PageLayout from '@layouts/PageLayout.astro'
 import BlogPostList from '@components/BlogPost/BlogPostList.astro'
 
-const blogEntries = await getCollection('blog')
+const blogEntries = await getCollection('blog').then((entries) =>
+	entries.sort((a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime())
+)
 ---
 
 <PageLayout title="blog">
