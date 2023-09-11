@@ -1,7 +1,7 @@
 ---
 title: Bug bounty vs pentesting - my experience
 description: Treat bug bounty programs like a pentest
-publishDate: 2023-11-10
+publishDate: 2023-09-11
 ---
 
 # Bug bounty vs pentesting - my experience
