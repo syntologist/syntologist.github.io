@@ -1,52 +1,32 @@
 ---
-title: Example blog post
-description: This is a example description
+title: Bug bounty vs pentesting - my experience
+description: Treat bug bounty programs like a pentest
 image:
   src: /src/assets/cybersec.jpeg
   alt: Teste
-publishDate: 2023-09-10
+publishDate: 2023-11-10
 ---
 
-# Heading 1
+# Bug bounty vs pentesting - my experience
 
-## Heading 2
+**If you want to qualify yourself in cyber security by joining bug bounty programs, treat it like a pentest.**
 
-### Heading 3
+When starting a career in cyber security there are several ways to test your skills and gain knowledge for free while still looking for a role in the field, such as [TryHackMe](https://tryhackme.com/), [HackTheBox](https://www.hackthebox.com/), etc., and very commonly, us newbies try to qualify ourselves for a pentesting position by joining bug bounty programs.
 
-#### Heading 4
+**But how much is this actually improving our pentester skills?**
 
-##### Heading 5
+Don’t get me wrong, bug bounties are great! My first experiences with hands-on hacking happened thanks to [Bugcrowd](https://www.bugcrowd.com/) and [HackerOne](https://www.hackerone.com/) and I’ve learned a lot through them, but let’s face it: hunting bugs is way different from an invasion test.
 
-###### Heading 6
+When bug hunting, you are chasing any existing kind of impact in a confined scope and spending weeks working on a single vulnerability.
 
-Hello world!
+When pentesting, your client wants all vulnerabilities, risk to brute force attacks, undefined headers, and expired certificates, they are looking for assurance and everything matters in this case.
 
-[Link](/)
+You can become the world’s best at chasing XSS but not deliver good security maturity to clients.
 
-![Sample image](https://images.unsplash.com/photo-1566837945700-30057527ade0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80)
+**“What should I do then?”**
 
-> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pulvinar elementum integer enim neque volutpat ac. Sed elementum tempus egestas sed sed risus. Non pulvinar neque laoreet suspendisse interdum consectetur libero. Metus vulputate eu scelerisque felis imperdiet proin fermentum.
+Treat your bug bounties like a pentest! I’m aware it takes more time and effort, and when hunting we are usually concerned with delivering quickly, but it is a great way to develop and sharpen realistic techniques and getting closer to what will be done in a company.
 
-```ts
-type MarkdownCodeBlock = {}
-```
+Nevertheless, that’s what I’ve learned on my newbie road as a bug hunter who got to have a few opportunities with direct clients.
 
-Example with `code inline` and some other words
-
----
-
-- Ul 1
-  - Ul nested 1
-    - Ul nested 2
-- Ul 2
-- Ul 3
-
-1. Ol
-2. Ol
-3. Ol
-4. Ol
-5. Ol
-
-**Bold**
-
-_Italic_
+### Keep hacking!
