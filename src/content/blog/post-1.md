@@ -1,9 +1,8 @@
 ---
 title: Bug bounty vs pentesting - my experience
 description: Treat bug bounty programs like a pentest
-image:
-  src: /src/assets/cybersec.jpeg
-  alt: Teste
+image: /src/assets/cybersec.jpeg
+imageAlt: Teste
 publishDate: 2023-11-10
 ---
 
