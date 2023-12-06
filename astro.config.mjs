@@ -1,7 +1,8 @@
 import { defineConfig } from 'astro/config'
 import tailwind from '@astrojs/tailwind'
-
 import sitemap from '@astrojs/sitemap'
+import rehypeKatex from 'rehype-katex'
+import remarkMath from 'remark-math'
 
 // https://astro.build/config
 export default defineConfig({
@@ -10,5 +11,9 @@ export default defineConfig({
 	build: {
 		format: 'directory'
 	},
-	integrations: [tailwind(), sitemap()]
+	integrations: [tailwind(), sitemap()],
+	markdown: {
+		remarkPlugins: [remarkMath],
+		rehypePlugins: [rehypeKatex]
+	}
 })
