@@ -1,4 +1,12 @@
-<footer class="border-y border-white p-4">
+---
+type Props = {
+	class?: string
+}
+
+const { class: className } = Astro.props
+---
+
+<footer class:list={['border-y border-white p-4', className]}>
 	"Within each personal computer is a miniature labyrinth - the enclave of partitions, hidden pathways that wind through
 	the transistors of the surface of a microprocessor"
 </footer>

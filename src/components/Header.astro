@@ -1,15 +1,27 @@
 ---
 import Menu from '@components/Menu.astro'
 import Path from '@components/Path.astro'
+
+type Props = {
+	class?: string
+	menuClass?: string
+	colors?: string
+}
+
+const { class: className, menuClass, colors = 'bg-black' } = Astro.props
 ---
 
 <header class="relative">
-	<div class="relative z-20 flex justify-between border-y border-white bg-black pr-4">
+	<div class:list={['relative z-20 flex justify-between border-y border-white pr-4', colors, className]}>
 		<button id="toggle-menu" class="p-4 transition-transform sm:pointer-events-none sm:rotate-0">></button>
 		<Path />
 	</div>
 	<Menu
-		class="absolute z-10 -translate-y-full border-b bg-black max-sm:-inset-x-px max-sm:border-x sm:relative sm:translate-y-0"
+		class:list={[
+			'absolute z-10 -translate-y-full border-b max-sm:-inset-x-px max-sm:border-x sm:relative sm:translate-y-0',
+			colors,
+			menuClass
+		]}
 	/>
 </header>
 

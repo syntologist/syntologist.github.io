@@ -6,9 +6,8 @@ import BaseLayout, { type Props } from '@layouts/BaseLayout.astro'
 const { class: className, ...props } = Astro.props
 ---
 
-<BaseLayout {...props} class="sm:px-4">
-	<slot name="head" slot="head"/>
-
+<BaseLayout {...props} class="bg-black font-mono text-white sm:px-4">
+	<slot name="head" slot="head" />
 	<div class="container max-w-2xl border-x border-white">
 		<Header />
 		<main class:list={['p-4', className]}>

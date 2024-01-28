@@ -3,9 +3,12 @@ export type Props = {
 	title: string
 	class?: string
 	description?: string
+	frontmatter?: any
 }
 
-const { title, description, class: className } = Astro.props
+const { class: className, frontmatter, ...props } = Astro.props
+const title = props.title || frontmatter?.title
+const description = props.description || frontmatter?.description
 ---
 
 <html lang="en">
@@ -22,7 +25,7 @@ const { title, description, class: className } = Astro.props
 		<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;800&display=swap" rel="stylesheet" />
 		<slot name="head" />
 	</head>
-	<body class:list={['bg-black font-mono text-white', className]}>
+	<body class={className}>
 		<slot />
 	</body>
 </html>

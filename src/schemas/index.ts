@@ -1,8 +1,9 @@
-import { z, type SchemaContext } from 'astro:content'
+import { z } from 'astro:content'
 
-export const blogSchema = ({ image }: SchemaContext) =>
+export const blogSchema = () =>
 	z.object({
 		title: z.string(),
 		description: z.string(),
-		publishDate: z.date()
+		publishDate: z.date(),
+		layout: z.string().optional()
 	})

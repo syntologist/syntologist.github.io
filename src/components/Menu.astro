@@ -13,8 +13,8 @@ const menu = [
 const { class: className } = Astro.props
 ---
 
-<nav id="menu" class:list={['border-white', className]}>
-	<ul class="grid divide-white max-sm:divide-y sm:auto-cols-fr sm:grid-flow-col sm:divide-x">
+<nav id="menu" class:list={['border-white [&_ul]:divide-white', className]}>
+	<ul class="grid max-sm:divide-y sm:auto-cols-fr sm:grid-flow-col sm:divide-x">
 		{
 			menu.map(({ label, href }) => (
 				<li class="px-4 py-2 text-center">

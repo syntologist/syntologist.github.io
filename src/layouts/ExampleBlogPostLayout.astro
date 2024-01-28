@@ -1,0 +1,35 @@
+---
+import Header from '@components/Header.astro'
+import Footer from '@components/Footer.astro'
+import BaseLayout, { type Props } from '@layouts/BaseLayout.astro'
+
+const { class: className, ...props } = Astro.props
+---
+
+<!-- The BaseLayout is necessary. You can change the classes if you want -->
+<BaseLayout {...props} class="bg-pink-500 font-sans text-black">
+	<!-- This link is necessary for LaTex formulas to display correctly -->
+	<link
+		slot="head"
+		rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+		integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV"
+		crossorigin="anonymous"
+	/>
+	<div class="max-w-2xl">
+		<!-- If you change the background, you need to specify its color to header as well -->
+		<!-- Can also pass text colors (e.g. colors="bg-red-500 text-white") -->
+		<!-- `class` styles the header tag -->
+		<!-- `menuClass` styles the menu tag -->
+		<Header colors="bg-pink-500" class="border-none" menuClass="border-none [&_ul]:divide-none [&_ul]:divide-black" />
+		<main class:list={['p-4', className]}>
+			<!-- `article` is necessary with some classes -->
+			<!-- At least `prose` and clases with `.katex` are necessary -->
+			<!-- `prose-invert` will be necessary if your background is dark -->
+			<article class="prose max-w-none text-black [&_p:has(.katex)]:mx-auto [&_p:has(.katex)]:w-fit">
+				<slot />
+			</article>
+		</main>
+		<Footer class="border-none" />
+	</div>
+</BaseLayout>

@@ -2,6 +2,7 @@
 title: Entropy based cryptography
 description: How random is security?
 publishDate: 2023-12-05
+# layout: ../../layouts/ExampleBlogPostLayout.astro
 ---
 
 # Entropy based cryptography
