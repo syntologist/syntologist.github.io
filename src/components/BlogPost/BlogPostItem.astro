@@ -21,7 +21,16 @@ function readTime(text: string) {
 		<h2 class="text-lg font-bold">{item.data.title}</h2>
 		<p>{item.data.description}</p>
 		<div class="mt-4 flex gap-2 text-sm">
-			<span>{item.data.publishDate.toLocaleDateString('en', { month: 'short', day: '2-digit', timeZone: 'UTC' })}</span>
+			<span
+				>{
+					item.data.publishDate.toLocaleDateString('en', {
+						month: 'short',
+						day: '2-digit',
+						year: 'numeric',
+						timeZone: 'UTC'
+					})
+				}</span
+			>
 			<span>·</span>
 			<span>{readTime(item.body)} min read</span>
 		</div>
