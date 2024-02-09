@@ -15,7 +15,7 @@ As much as we strive for privacy on our daily routine is nearly impossible to dr
 
 To reject modernity is to resist innovation, hence we find ourselves in a situation where we must accept sacrificing our privacy for the sake of being a part of a world we can’t escape.
 
-Ever since the web has matured from giving visibility to those interested on sharing a personal cause to profiting big corporations, each regular internet user has become a personal data mining rig, a telemetry generator; they buy our privacy and sell us entertainment for the price of minimum brain activity and the feeling of hitting a jackpot every [12 seconds.](https://time.com/3858309/attention-spans-goldfish/)
+Ever since the web has matured from giving visibility to those interested in sharing a personal cause to profiting big corporations, each regular internet user has become a personal data mining rig, a telemetry generator; they buy our privacy and sell us entertainment for the price of minimum brain activity and the feeling of hitting a jackpot every [12 seconds.](https://time.com/3858309/attention-spans-goldfish/)
 
 
 Having decent privacy should absolutely not be something exclusive to one with “above average” computer skills, every individual shall be granted with the right to have access to all services and law enforced backdoors running on their very own personal machine without having to be an expert on kernel architecture.
