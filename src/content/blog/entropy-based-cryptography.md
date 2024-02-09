@@ -11,6 +11,7 @@ Entropy is a measure of randomness, which means its value changes depending on t
 Computer security strongly relies on cryptography, however, computers are deterministic machines unable to generate true random numbers.
 
 > Any one who considers arithmetical methods of producing random digits is, of course, in a state of sin. For, as has been pointed out several times, there is no such thing as a random number—there are only methods to produce random numbers, and a strict arithmetic procedure of course is not such a method.
+
 ~ John von Neumann
 
 The existence of true randomness is debatable; it is defined by the result of no unpredictability, a system with the highest form of entropy (truly random) holds no pattern, no deterministic output, and no seed value – unlike pseudo randomness, which depends on a number (or vector) in order to initialize an output generator.
