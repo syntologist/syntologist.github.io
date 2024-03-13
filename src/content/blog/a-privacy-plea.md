@@ -1,7 +1,7 @@
 ---
 title: A privacy plea, a web that once was
 description: I want a computer that I own
-publishDate: 2024-09-02
+publishDate: 2024-02-09
 ---
 
 # A privacy plea, a web that once was
