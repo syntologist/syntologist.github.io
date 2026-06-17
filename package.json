@@ -11,7 +11,7 @@
 		"fmt": "prettier --write \"src/**/*.{md,ts,astro}\""
 	},
 	"dependencies": {
-		"@astrojs/sitemap": "^3.0.0",
+		"@astrojs/sitemap": "^3.1.6",
 		"@astrojs/tailwind": "^5.0.0",
 		"@tailwindcss/typography": "^0.5.10",
 		"astro": "^3.0.10",
