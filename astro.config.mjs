@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config'
-import tailwind from '@astrojs/tailwind'
+import tailwindcss from '@tailwindcss/vite'
 import sitemap from '@astrojs/sitemap'
+import { unified } from '@astrojs/markdown-remark'
 import rehypeKatex from 'rehype-katex'
 import remarkMath from 'remark-math'
 
@@ -11,9 +12,10 @@ export default defineConfig({
 	build: {
 		format: 'directory'
 	},
-	integrations: [tailwind(), sitemap()],
+	integrations: [sitemap()],
+	vite: {
+		plugins: [tailwindcss()],
+	},
 	markdown: {
-		remarkPlugins: [remarkMath],
-		rehypePlugins: [rehypeKatex]
 	}
 })

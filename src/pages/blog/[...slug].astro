@@ -1,5 +1,5 @@
 ---
-import { getCollection, type CollectionEntry } from 'astro:content'
+import { getCollection, render, type CollectionEntry } from 'astro:content'
 import BlogPostLayout from '@layouts/BlogPostLayout.astro'
 
 type Props = {
@@ -9,13 +9,13 @@ type Props = {
 export async function getStaticPaths() {
 	const blogEntries = await getCollection('blog')
 	return blogEntries.map((entry) => ({
-		params: { slug: entry.slug },
+		params: { slug: entry.id },
 		props: { entry }
 	}))
 }
 
 const { entry } = Astro.props
-const { Content } = await entry.render()
+const { Content } = await render(entry)
 const Layout = entry.data.layout ? Fragment : BlogPostLayout
 ---
 
