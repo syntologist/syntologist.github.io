@@ -176,17 +176,15 @@ In such way I still cannot wrap my head around it quite enough, throughout this 
 
 The default `SAPCPIC:admin` credential worked as valid credentials for about half a day. It is a standard pre-configured Communication (CPIC) user type used for system-to-system or inter-process communication (such as remote function calls) usually in older SAP releases. Nothing much could be done in that time window except for some fingerprinting via XML envelope calling `RFC_SYSTEM_INFO`:
 
-```
--> System ID - S45 - SAP identifier
--> Database - HDB (SAP HANA) - in-memory db
--> DB Host - saph45db - HANA db server separado
--> SAP release - 758 - Netweaver 7.58
--> Kernel - 793 --
--> OS - Linux --
--> S/4HANA - yes - S4_HANA=X
--> Internal IP - 134.***.247.26 --
--> Machine ID - 390 - hardware identifier
-```
+**-> System ID - S45** - SAP identifier
+**-> Database** - HDB (SAP HANA) - in-memory db
+**-> DB Host** - saph45db - HANA db server separado
+**-> SAP release** - 758 - Netweaver 7.58
+**-> Kernel** - 793 --
+**-> OS** - Linux --
+**-> S/4HANA** - yes - S4_HANA=X
+**-> Internal IP** - 134.***.247.26 --
+**-> Machine ID** - 390 - hardware identifier
 
 This is **S/4HANA** on **HANA**, Northrop's ERP backbone. The QA system (client 000) is exposed with a relatively current kernel. The HANA database is on a separate host (`saph45db`), meaning we'd need to pivot through the application server to reach the database layer.
 
