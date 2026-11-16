@@ -783,7 +783,7 @@ If you're struggling with mental health and constantly looking for cyber maraudi
 It gets better.
 
 Some points I'd like to address to anyone who's read so far:
-* As a huge aviation and engineering fan, I do not condemn the attitude of those with Northrop Grumman's nor any other military aircraft constructor's products in hands. I solely appreciate the machinery. 
+* As a huge aviation and engineering fan, I do not condone the attitude of those with Northrop Grumman's nor any other military aircraft constructor's products in hands. I solely appreciate the machinery. 
 * I do not have great expertise in M*crosoft environments, hence there can be easily seen I might've missed important paths anyone with more understanding about it than me would've explored better.
 * I am not a threat.
 * Aircraft ASCII art from [https://ascii.co.uk/art/air](https://ascii.co.uk/art/air).
